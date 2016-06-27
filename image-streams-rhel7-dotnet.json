@@ -1,0 +1,50 @@
+{
+  "kind": "ImageStreamList",
+  "apiVersion": "v1",
+  "metadata": {},
+  "items": [
+    {
+      "kind": "ImageStream",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "dotnet",
+        "creationTimestamp": null
+      },
+      "spec": {
+        "tags": [
+          {
+            "name": "latest",
+            "annotations": {
+              "description": "Build and run .NET Core applications",
+              "iconClass": "icon-dotnet",
+              "tags": "builder,dotnet",
+              "supports":"dotnet",
+              "sampleRepo": "https://github.com/sspeiche/dotnet-ex.git",
+              "sampleContextDir": "asp-net-hello-world"
+            },
+            "from": {
+              "kind": "ImageStreamTag",
+              "name": "1.0"
+            }
+          },
+          {
+            "name": "1.0",
+            "annotations": {
+              "description": "Build and run .NET Core 1.0 applications",
+              "iconClass": "icon-dotnet",
+              "tags": "builder,dotnet",
+              "supports":"dotnet:1.0,dotnet:1,dotnet",
+              "version": "1.0",
+              "sampleRepo": "https://github.com/sspeiche/dotnet-ex.git",
+              "sampleContextDir": "asp-net-hello-world"
+            },
+            "from": {
+              "kind": "DockerImage",
+              "name": "registry.access.redhat.com/dotnet/dotnetcore-10-rhel7:latest"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

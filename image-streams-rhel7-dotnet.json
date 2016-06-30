@@ -19,8 +19,8 @@
               "iconClass": "icon-dotnet",
               "tags": "builder,dotnet",
               "supports":"dotnet",
-              "sampleRepo": "https://github.com/sspeiche/dotnet-ex.git",
-              "sampleContextDir": "asp-net-hello-world"
+              "sampleRepo": "https://github.com/aspnet/cli-samples.git",
+              "sampleContextDir" : "HelloMvc"
             },
             "from": {
               "kind": "ImageStreamTag",
@@ -35,8 +35,8 @@
               "tags": "builder,dotnet",
               "supports":"dotnet:1.0,dotnet:1,dotnet",
               "version": "1.0",
-              "sampleRepo": "https://github.com/sspeiche/dotnet-ex.git",
-              "sampleContextDir": "asp-net-hello-world"
+              "sampleRepo": "https://github.com/aspnet/cli-samples.git",
+              "sampleContextDir" : "HelloMvc"
             },
             "from": {
               "kind": "DockerImage",
